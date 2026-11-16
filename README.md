@@ -4,8 +4,6 @@
 
 ## 1. Overview
 
-MMT uses two student networks and their exponential moving average (EMA) teachers to refine cluster-based pseudo labels. CAMT retains this mutual-teaching framework and introduces a **shared camera-aware proxy memory** and an additional proxy-based contrastive objective.
-
 CAMT follows this training cycle:
 
 1. **Source-domain pretraining:** Independently pretrain two ResNet-50 models with labeled source data.
