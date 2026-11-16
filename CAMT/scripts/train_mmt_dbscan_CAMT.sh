@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0,1 PYTHONNOUSERSITE=1 \
+python examples/mmt_train_dbscan_cap.py \
+  -ds dukemtmc \
+  -dt msmt17 \
+  -a resnet50 \
+  -b 32 \
+  --num-instances 4 \
+  --iters 400 \
+  --epochs 40 \
+  --eval-step 10 \
+  --workers 4 \
+  --seed 1 \
+  --lr 0.00035 \
+  --soft-ce-weight 0.5 \
+  --soft-tri-weight 0.8 \
+  --cap-temp 0.05 \
+  --cap-momentum 0.2 \
+  --cap-weight 0.1 \
+  --init-1 logs/dukemtmcTOmsmt17/resnet50-pretrain-1/model_best.pth.tar \
+  --init-2 logs/dukemtmcTOmsmt17/resnet50-pretrain-2/model_best.pth.tar \
+  --logs-dir logs/dukemtmcTOmsmt17/resnet50-CAMT
