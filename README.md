@@ -2,8 +2,6 @@
 
 **Camera-Aware Mutual Teaching (CAMT)** is a research implementation for **unsupervised domain adaptation (UDA) in person re-identification (Re-ID)**. This project combines mutual teacher–student learning with camera-aware proxy associations. The target-domain identities are **not used as training labels**; target camera identifiers are used to construct camera-aware proxies.
 
-> **Repository status (November 2026):** This repository currently contains documentation only. The CAMT source files, runnable training scripts, dependency lockfile, pretrained checkpoints, and evaluation outputs have **not yet been uploaded**. Commands below document the local implementation structure and will become runnable after the corresponding files are published. The CAMT manuscript is under preparation; it should not be described as an accepted or published paper.
-
 ## 1. Overview
 
 MMT uses two student networks and their exponential moving average (EMA) teachers to refine cluster-based pseudo labels. CAMT retains this mutual-teaching framework and introduces a **shared camera-aware proxy memory** and an additional proxy-based contrastive objective.
